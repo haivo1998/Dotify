@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistDetailViewController" customModule="Dotify" customModuleProvider="target">
+            <connections>
+                <outlet property="favButton" destination="CC0-Yh-nLP" id="r1K-dF-fQt"/>
+                <outlet property="ownerLabel" destination="eCS-27-8ho" id="5YF-25-Iov"/>
+                <outlet property="songTableView" destination="N5D-t9-60F" id="iXK-Hm-vIs"/>
+                <outlet property="thumbImageView" destination="SEg-qE-FyL" id="hhq-wK-BuI"/>
+                <outlet property="titleLabel" destination="gfr-wk-UTa" id="acZ-eN-Avh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N5D-t9-60F">
+                    <rect key="frame" x="10" y="354" width="394" height="498"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SEg-qE-FyL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Vnb-Y0-gX5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCS-27-8ho">
+                    <rect key="frame" x="5" y="284" width="43" height="23.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="2" height="2"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CC0-Yh-nLP">
+                    <rect key="frame" x="359" y="289" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ogs-ME-6P4"/>
+                        <constraint firstAttribute="width" constant="50" id="wvh-ty-Guz"/>
+                    </constraints>
+                    <state key="normal" image="favorite"/>
+                    <connections>
+                        <action selector="didTapFav:" destination="-1" eventType="touchUpInside" id="Fhq-4e-Pvb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbl-ZP-JfD">
+                    <rect key="frame" x="5" y="49" width="35" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="dda-To-A9c"/>
+                        <constraint firstAttribute="height" constant="42" id="lMP-Fs-tIT"/>
+                    </constraints>
+                    <state key="normal" image="Back Chevron"/>
+                    <connections>
+                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="Vp8-9g-xcM"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-wk-UTa">
+                    <rect key="frame" x="5" y="311.5" width="119" height="27.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="2" height="2"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gfr-wk-UTa" firstAttribute="leading" secondItem="SEg-qE-FyL" secondAttribute="leading" constant="5" id="2cP-zW-qw0"/>
+                <constraint firstItem="6MH-ah-CHr" firstAttribute="bottom" secondItem="N5D-t9-60F" secondAttribute="bottom" constant="10" id="7IN-a4-sU7"/>
+                <constraint firstItem="N5D-t9-60F" firstAttribute="leading" secondItem="6MH-ah-CHr" secondAttribute="leading" constant="10" id="A30-OL-QcP"/>
+                <constraint firstItem="6MH-ah-CHr" firstAttribute="trailing" secondItem="N5D-t9-60F" secondAttribute="trailing" constant="10" id="DcP-XF-dDj"/>
+                <constraint firstItem="N5D-t9-60F" firstAttribute="top" secondItem="SEg-qE-FyL" secondAttribute="bottom" constant="10" id="M1n-Gc-Gmn"/>
+                <constraint firstItem="qbl-ZP-JfD" firstAttribute="leading" secondItem="gfr-wk-UTa" secondAttribute="leading" id="Uzu-VS-e6l"/>
+                <constraint firstItem="SEg-qE-FyL" firstAttribute="top" secondItem="6MH-ah-CHr" secondAttribute="top" id="YKk-UK-64g"/>
+                <constraint firstItem="gfr-wk-UTa" firstAttribute="bottom" secondItem="SEg-qE-FyL" secondAttribute="bottom" constant="-5" id="ZaX-qX-n2q"/>
+                <constraint firstItem="6MH-ah-CHr" firstAttribute="trailing" secondItem="SEg-qE-FyL" secondAttribute="trailing" id="esG-GL-atU"/>
+                <constraint firstItem="CC0-Yh-nLP" firstAttribute="bottom" secondItem="gfr-wk-UTa" secondAttribute="bottom" id="mZl-o8-VOC"/>
+                <constraint firstItem="gfr-wk-UTa" firstAttribute="top" secondItem="eCS-27-8ho" secondAttribute="bottom" constant="4" id="nvS-MO-ItS"/>
+                <constraint firstItem="CC0-Yh-nLP" firstAttribute="trailing" secondItem="SEg-qE-FyL" secondAttribute="trailing" constant="-5" id="ouR-4H-01A"/>
+                <constraint firstItem="qbl-ZP-JfD" firstAttribute="top" secondItem="SEg-qE-FyL" secondAttribute="top" constant="5" id="pio-8w-wjT"/>
+                <constraint firstItem="eCS-27-8ho" firstAttribute="leading" secondItem="gfr-wk-UTa" secondAttribute="leading" id="yRU-iE-T6k"/>
+                <constraint firstItem="SEg-qE-FyL" firstAttribute="leading" secondItem="6MH-ah-CHr" secondAttribute="leading" id="yg8-hM-GVa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="6MH-ah-CHr"/>
+            <point key="canvasLocation" x="53.623188405797109" y="47.544642857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back Chevron" width="12.5" height="21"/>
+        <image name="favorite" width="27" height="27"/>
+    </resources>
+</document>

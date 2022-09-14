@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListPlayListViewController" customModule="Dotify" customModuleProvider="target">
+            <connections>
+                <outlet property="playListTableView" destination="onv-40-luD" id="HNh-HH-t5g"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoA-Cg-cfS">
+                    <rect key="frame" x="20" y="64" width="119.5" height="27.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                    <color key="textColor" red="0.8980392157" green="0.37254901959999998" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="onv-40-luD">
+                    <rect key="frame" x="10" y="101.5" width="394" height="750.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="onv-40-luD" firstAttribute="top" secondItem="RoA-Cg-cfS" secondAttribute="bottom" constant="10" id="28V-s6-gwF"/>
+                <constraint firstItem="Apt-Uz-I76" firstAttribute="trailing" secondItem="onv-40-luD" secondAttribute="trailing" constant="10" id="3uu-dp-Ruw"/>
+                <constraint firstItem="RoA-Cg-cfS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Irw-Wr-R1P"/>
+                <constraint firstItem="RoA-Cg-cfS" firstAttribute="top" secondItem="Apt-Uz-I76" secondAttribute="top" constant="20" id="KeC-Kw-sW5"/>
+                <constraint firstItem="Apt-Uz-I76" firstAttribute="bottom" secondItem="onv-40-luD" secondAttribute="bottom" constant="10" id="axi-Qb-aoU"/>
+                <constraint firstItem="onv-40-luD" firstAttribute="leading" secondItem="Apt-Uz-I76" secondAttribute="leading" constant="10" id="ueo-c5-T5g"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Apt-Uz-I76"/>
+            <point key="canvasLocation" x="132" y="-78.710644677661179"/>
+        </view>
+    </objects>
+</document>
